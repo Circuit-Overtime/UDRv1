@@ -8,6 +8,15 @@ const firebaseConfig = {
   appId: "1:505956573003:web:893ed0fc6790c9414612ce"
 };
 
+window.addEventListener("orientationchange", function() {
+  if (window.orientation == 90 || window.orientation == -90) {
+    document.body.classList.add("landscape");
+  } else {
+    document.body.classList.remove("landscape");
+  }
+});
+
+
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const checkboxes = document.querySelectorAll('.commCheck');
