@@ -4,6 +4,16 @@ body
   background-color: #111;
   outline: none;
   border: none;
+  transform-origin: top left;
+  transform: rotate(90deg);
+  width: 100vh;
+  height: 100vw;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
 }
       .joysticks
       {
@@ -239,6 +249,13 @@ i
   inset 0 15px 25px rgba(0,0,0,0.35);
 }
 
+.commCheckPwrOn:checked + span
+{
+  box-shadow: inset 0 2px 2px rgba(0,0,0,0.35),
+  inset 0 5px 5px rgba(0,0,0,0.5),
+  inset 0 15px 25px rgba(0,0,0,0.35);
+}
+
 .buttons label span
 {
   position: absolute;
@@ -278,6 +295,12 @@ i
   0 0 8px #219cf3;
 }
 
+.commCheckPwrOn:checked + span + i
+{
+  color: #fff;
+  text-shadow:  0 0 5px #219cf3,
+  0 0 8px #219cf3;
+}
 
 .batVal
 {
