@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Reenie+Beanie&family=Silkscreen&family=VT323&family=Zeyada&display=swap');
+body
+{
+  background-color: #111;
+  outline: none;
+  border: none;
+}
+      .joysticks
+      {
+        position: relative;
+        top: 1%;
+        width: 98%;
+        left: 1%;
+        border-radius: 25px;
+        height:  160px;
+        background-color: #1111117a;
+        backdrop-filter: blur(25px);
+        overflow: hidden;
+        outline: none;
+        border: none;
+      }
+  #joystick1 
+  {
+          position: relative;
+          left: 5%;
+          top: 2%;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          border: 2px solid rgb(0, 255, 0);
+          background-color: #00ff6a;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+}
+
+#knob1 
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #00644f;
+  position: fixed;
+}
+
+
+#joystick2 {
+  bottom: 1%;
+  left: 73%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #E2725B;
+          background-color: #E2725B;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#knob2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e1e6e1;
+  position: fixed;
+}
+
+
+.batPerico
+{
+    color: #fff;
+    position: absolute;
+    left: 40%;
+    top: 60px;
+    font-size: 30px;
+}
+.batPer
+{
+    color: #fff;
+    position: absolute;
+    left: 45%;
+    top: 60px;
+    font-size: 15px;
+    z-index: 100;
+}
+
+.airplaneico
+{
+    color: #fff;
+    position: absolute;
+    left: 40%;
+    top: 100px;
+    font-size: 30px;
+}
+.airplane
+{
+    color: #fff;
+    position: absolute;
+    left: 45%;
+    top: 100px;
+    font-size: 15px;
+    z-index: 100;
+}
+
+
+.hourglassico
+{
+    color: #fff;
+    position: absolute;
+    left: 40%;
+    top: 140px;
+    font-size: 30px;
+}
+.hourglass
+{
+    color: #fff;
+    position: absolute;
+    left: 45%;
+    top: 140px;
+    font-size: 15px;
+    z-index: 100;
+}
+
+
+.commands button
+{
+  margin-left: 25px;
+  top: 10px;
+  position: relative;
+  height: 50px;
+  width: 80px;
+}
+
+/*
+input[type="checkbox"] {
+  display: none;
+   
+}
+
+
+
+label[for = "althold"].checkbox,
+label[for = "loiter"].checkbox,
+label[for = "land"].checkbox, 
+label[for = "takeOff"].checkbox
+{
+  display: inline-block;
+  left: 35%;
+  background: url('drone.jpg') no-repeat;
+  z-index: 100;
+  position: relative;
+  margin-left: 25px;
+  background-size: cover;
+  background-blend-mode: screen;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  height: 55px;
+  width: 55px;
+  color: #fff;
+}
+
+
+input[type="checkbox"]:checked + label.checkbox {
+  background: url('drone.jpg') no-repeat;
+}
+
+i
+{
+  position: relative;
+  left: 25%;
+  top: 25%;
+  
+}
+.commands
+{
+  position: absolute;
+  width: 98%;
+  top: 40%;
+  left: 1%;
+  border-radius: 25px;
+  height: 70px;
+  background-color: #0f0f0f;
+  overflow: hidden;
+}
+
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: space-around;
+  left: 45%;
+}
+
+
+*/
+
+.buttons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 250px;
+  gap: 20px;
+  position: absolute;
+  left: 35%;
+  top: 3%;
+}
+
+.buttons label
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+}
+
+.buttons label input 
+{
+  appearance: none;  
+}
+
+
+.commCheck:checked + span
+{
+  box-shadow: inset 0 2px 2px rgba(0,0,0,0.35),
+  inset 0 5px 5px rgba(0,0,0,0.5),
+  inset 0 15px 25px rgba(0,0,0,0.35);
+}
+
+.buttons label span
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#555353, #363535, #303030);
+  border: 2px solid #222;
+  border-radius: 6px;
+  box-shadow: inset 0 5px 1px rgba(0,0,0,0,.35),
+  0 5px 5px rgba(0,0,0,0,0,.5),
+  0 15px 25px rgba(0,0,0,.35);
+  transition: 0.15s;
+}
+
+.buttons label span::before
+{
+  content: '';
+  position: absolute;
+  inset: 5px 3px;
+  border-top: 1px solid #ccc;
+  filter: blur(2px);
+}
+
+.buttons label i
+{
+  position: relative;
+  z-index: 10;
+  font-size: 1.5em;
+  color: #111;
+  transition: 0.25s;
+}
+
+.commCheck:checked + span + i
+{
+  color: #fff;
+  text-shadow:  0 0 5px #219cf3,
+  0 0 8px #219cf3;
+}
+
+
+.batVal
+{
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  display: flex;
+  width: 150px;
+  color: #ffc;
+  font-family: 'Silkscreen', cursive;
+}
+.flightMode
+{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  justify-content: center;
+  display: flex;
+  width: 150px;
+  color: #00ff6a; /*#ffc, #ff0*/
+  font-family: 'Silkscreen', cursive;
+}
+
+.altitude
+{
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  justify-content: center;
+  display: flex;
+  width: 150px;
+  color: #f2ff78; /*#ffc, #ff0*/
+  font-family: 'Silkscreen', cursive;
+}
+.sateliteConnect
+{
+  position: absolute;
+  top: -5px;
+  left: 96%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  justify-content: center;
+  display: flex;
+  width: 150px;
+  color: #ffc400; /*#ffc, #ff0*/
+  font-family: 'Silkscreen', cursive;
+}
+
+#map {
+  height: 480px;
+  width: 98%;
+  position: absolute;
+  top: -155px;
+ z-index: -2;
+ filter: brightness(65%);
+ outline: none;
+ display: none;
+}
+
+.lattitudeShow
+{
+  position: absolute;
+  top: 85%;
+  left: 73%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  justify-content: center;
+  display: flex;
+  width: 150px;
+  color: #00f7ff; /*#ffc, #ff0*/
+  font-family: 'Silkscreen', cursive;
+}
+
+.longitudeShow
+{
+  position: absolute;
+  top: 85%;
+  left: 90%;
+  transform: translateX(-50%);
+  letter-spacing: 2px;
+  justify-content: center;
+  display: flex;
+  width: 150px;
+  color: #00d9ff; /*#ffc, #ff0*/
+  font-family: 'Silkscreen', cursive;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnlHriGXO_GIl9TtjqyDZhxEgKjx4cz-o&callback=initMap"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, orientation=landscape">
+  <link rel="stylesheet" href="joystick.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="joysticks">
+ <div id="joystick1">
+        <div id="knob1"></div>
+      </div>
+
+      <div id="joystick2">
+        <div id="knob2"></div>
+      </div>
+
+      <!-- <ion-icon name="battery-full" class="batPerico">  </ion-icon><p class="batPer"> 25%</p>
+
+
+    <ion-icon name="airplane" class="airplaneico">  </ion-icon><p class="airplane"> 1   
+    </p>
+
+    
+    <ion-icon name="hourglass" class="hourglassico">  </ion-icon><p class="hourglass"> 730ms</p> -->
+    </div>
+
+    <div class="buttons">
+      <label>
+        <input type="checkbox" name="check" class="commCheck">
+          <span></span>
+          <i class="fa-solid fa-power-off"></i>
+        </input>
+      </label>
+
+      <label>
+        <input type="checkbox" name="check" class="commCheck">
+          <span></span>
+          <i class="fa-solid fa-plane-departure"></i>
+        </input>
+      </label>
+
+      <label>
+        <input type="checkbox" name="check" class="commCheck">
+          <span></span>
+          <i class="fa-solid fa-plane-arrival"></i>
+        </input>
+      </label>
+
+      <label>
+        <input type="checkbox" name="check" class="commCheck">
+          <span></span>
+          <i class="fa-sharp fa-solid fa-plane-lock"></i>
+        </input>
+      </label>
+
+      <label>
+        <input type="checkbox" name="check" class="commCheck">
+          <span></span>
+          <i class="fa-sharp fa-solid fa-paper-plane"></i>
+        </input>
+      </label>
+
+      <label>
+        <input type="checkbox" name="check" class="commCheck">
+          <span></span>
+          <i class="fa-solid fa-power-off"></i>
+        </input>
+      </label>
+    </div>
+    <div id="map"></div>
+
+    <p class="batVal">25%</p>
+    <p class="flightMode">AltHold</p>
+    <p class="altitude">25m</p>
+    <p class="sateliteConnect">7</p>
+
+    <p class="lattitudeShow">22.89337</p>
+    <p class="longitudeShow">88.37172</p>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+      
+      <script src="joystick.js"></script>
+</body>
+</html>
+
+<!-- AIzaSyBnlHriGXO_GIl9TtjqyDZhxEgKjx4cz-o -->
