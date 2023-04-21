@@ -26,6 +26,7 @@ var yValue2 = 1500; // center value
 
 // Joystick movement handler
 function moveJoystick1(event) {
+  event.preventDefault();
   var xCenter1 = joystick1.offsetLeft + joystick1.clientWidth / 2;
   var yCenter1 = joystick1.offsetTop + joystick1.clientHeight / 2;
   var x1 = event.clientX;
@@ -70,6 +71,7 @@ function moveJoystick1(event) {
 }
 
 function moveJoystick2(event) {
+  event.preventDefault();
   var xCenter2 = joystick2.offsetLeft + joystick2.clientWidth / 2;
   var yCenter2 = joystick2.offsetTop + joystick2.clientHeight / 2;
   var x2 = event.clientX;
@@ -145,19 +147,23 @@ function centerKnob1() {
 
 
 // Attach joystick event listeners
-joystick1.addEventListener('touchstart', function() {
+joystick1.addEventListener('touchstart', function(e) {
+  e.preventDefault();
   document.addEventListener('touchmove', moveJoystick1);
 });
-document.addEventListener('touchend', function() {
+document.addEventListener('touchend', function(e) {
+  e.preventDefault();
   document.removeEventListener('touchmove', moveJoystick1);
   centerKnob1();
 });
 
 
-joystick2.addEventListener('touchstart', function() {
+joystick2.addEventListener('touchstart', function(e) {
+  e.preventDefault();
   document.addEventListener('touchmove', moveJoystick2);
 });
-document.addEventListener('touchend', function() {
+document.addEventListener('touchend', function(e) {
+  e.preventDefault();
   document.removeEventListener('touchmove', moveJoystick2);
   centerKnob2();
 });
