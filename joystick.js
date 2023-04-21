@@ -10,7 +10,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
-const checkboxes = document.querySelectorAll('.flightModeCheckbox');
+const checkboxes = document.querySelectorAll('.commCheck');
 var joystick1 = document.getElementById('joystick1');
 var knob1 = document.getElementById('knob1');
 var joystick2 = document.getElementById('joystick2');
@@ -143,57 +143,58 @@ function centerKnob1() {
 
 
 // Attach joystick event listeners
-joystick1.addEventListener('mousedown', function() {
-  document.addEventListener('mousemove', moveJoystick1);
+joystick1.addEventListener('touchstart', function() {
+  document.addEventListener('touchmove', moveJoystick1);
 });
-document.addEventListener('mouseup', function() {
-  document.removeEventListener('mousemove', moveJoystick1);
+document.addEventListener('touchend', function() {
+  document.removeEventListener('touchmove', moveJoystick1);
   centerKnob1();
 });
 
 
-joystick2.addEventListener('mousedown', function() {
-  document.addEventListener('mousemove', moveJoystick2);
+joystick2.addEventListener('touchstart', function() {
+  document.addEventListener('touchmove', moveJoystick2);
 });
-document.addEventListener('mouseup', function() {
-  document.removeEventListener('mousemove', moveJoystick2);
+document.addEventListener('touchend', function() {
+  document.removeEventListener('touchmove', moveJoystick2);
   centerKnob2();
 });
 
 
 
 
-// function handleCheckboxCheck(event) {
-//   const checkbox = event.target;
+function handleCheckboxCheck(event) {
+  const checkbox = event.target;
   
-//   if (checkbox.checked) {
+  
+  if (checkbox.checked) {
     
-//     firebase.database().ref('/').update({
-//       currMode : event.target.name
-//     })
-//     checkboxes.forEach((c) => {
-//       if (c !== checkbox) {
-//         c.checked = false;
-//       }
-//     });
-//   }
-// }
-
-// checkboxes.forEach((checkbox) => {
-//   checkbox.addEventListener('click', handleCheckboxCheck);
-// });
-
-function initMap() {
-  var myLatLng = {lat: 22.895800, lng: 88.395714};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: myLatLng,
-    disableDefaultUI : true,
-  });
+    firebase.database().ref('/').update({
+      currMode : event.target.id
+    })
+    checkboxes.forEach((c) => {
+      if (c !== checkbox) {
+        c.checked = false;
+      }
+    });
+  }
 }
 
-initMap();
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('click', handleCheckboxCheck);
+});
+
+// function initMap() {
+//   var myLatLng = {lat: 22.895800, lng: 88.395714};
+
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 12,
+//     center: myLatLng,
+//     disableDefaultUI : true,
+//   });
+// }
+
+
 
 
 // https://www.openstreetmap.org/?mlat=22.89337&mlon=88.37172#map=19/22.89337/88.37172
